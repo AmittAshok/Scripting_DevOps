@@ -65,6 +65,7 @@ def path_editor():
     # Result is True
     print(f"Dir Exsist: {os.path.isdir(file_path)}")          
     # result is False
+    
 def system_editor():
     os.system('echo "Hello From Amitt Ashok"') 
     print(f"Process ID {os.getpid()}")
