@@ -43,7 +43,6 @@ def remove_file():
 def put_env():
     os.putenv('name', 'amitt')
     print("name:", os.getenv('name'))  
-    
     os.putenv('MY_VAR', '1234')
     print("MY_VAR:", os.getenv('MY_VAR'))      
     
@@ -56,23 +55,28 @@ def path_editor():
     working_dir = os.getcwd()
     print("Current working dir :", working_dir)
     file_name = "demo.txt"
+    # here file_name will add with working directory path 
     file_path = os.path.join(working_dir, file_name )
     print("Full file path is :", file_path)
-
     if not os.path.isfile(file_path):
         with open (file_path, 'w') as f:
             f.write('Hello, World')
-    
     print(f"File exsist: {os.path.isfile(file_path)}")   
+    # Result is True
     print(f"Dir Exsist: {os.path.isdir(file_path)}")          
-
+    # result is False
 def system_editor():
     os.system('echo "Hello From Amitt Ashok"') 
-
     print(f"Process ID {os.getpid()}")
     print(f"Get Login in user {os.getlogin()}")
 
-
+def permission_file():
+    file_name = "demo.txt"
+    with open(file_name, 'w') as f:
+        f.write('I am living awsome Life')
+    os.chmod(file_name, 0o777)    
+    print(f"Permission chnaged {file_name}")
+    
 #current_working_dir()
 #new_dir = "raja"
 #create_new()
@@ -85,3 +89,4 @@ def system_editor():
 #remove_file()
 #put_env()
 path_editor()
+permission_file()
