@@ -49,6 +49,30 @@ def put_env():
     
     
 os.chmod("/home/amitt-ashok/shell_script/log.txt", 0o777)   
+
+
+# Path Manipulation
+def path_editor():
+    working_dir = os.getcwd()
+    print("Current working dir :", working_dir)
+    file_name = "demo.txt"
+    file_path = os.path.join(working_dir, file_name )
+    print("Full file path is :", file_path)
+
+    if not os.path.isfile(file_path):
+        with open (file_path, 'w') as f:
+            f.write('Hello, World')
+    
+    print(f"File exsist: {os.path.isfile(file_path)}")   
+    print(f"Dir Exsist: {os.path.isdir(file_path)}")          
+
+def system_editor():
+    os.system('echo "Hello From Amitt Ashok"') 
+
+    print(f"Process ID {os.getpid()}")
+    print(f"Get Login in user {os.getlogin()}")
+
+
 #current_working_dir()
 #new_dir = "raja"
 #create_new()
@@ -60,3 +84,4 @@ os.chmod("/home/amitt-ashok/shell_script/log.txt", 0o777)
 #new_file()
 #remove_file()
 #put_env()
+path_editor()
