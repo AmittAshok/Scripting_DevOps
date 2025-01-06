@@ -67,6 +67,7 @@ def path_editor():
     # result is False
     
 def system_editor():
+    # use for system related informations
     os.system('echo "Hello From Amitt Ashok"') 
     print(f"Process ID {os.getpid()}")
     print(f"Get Login in user {os.getlogin()}")
@@ -89,5 +90,6 @@ def permission_file():
 #new_file()
 #remove_file()
 #put_env()
-path_editor()
-permission_file()
+#path_editor()
+#permission_file()
+system_editor()

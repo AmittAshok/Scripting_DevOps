@@ -42,3 +42,4 @@ print(f"Disk Usage (%): {disk_use.percent}")
 # Running process 
 for process in psutil.process_iter(['pid', 'name', 'username']):
     print(process.info)
+     

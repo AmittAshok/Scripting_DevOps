@@ -5,4 +5,3 @@ s3 = boto3.client('s3')
 response = s3.delete_bucket(Bucket= '0724amitt')
 print(response)
 
-instance = boto3.client('ec2')
