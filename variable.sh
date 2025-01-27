@@ -6,4 +6,4 @@ if id "$username" &>/dev/null; then
     echo "$username" is exist
 else
     echo " not exist"
-fi    
+fi

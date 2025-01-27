@@ -6,9 +6,9 @@
 running=$( docker ps -q)
 
 if [ -z "$running" ];then
-        echo " no running containers"
+	echo " no running containers"
 else
-        echo "removing Containers..."
+	echo "removing Containers..."
 
 # Stop all running conatiner
 docker stop $(docker ps -aq)      # Stops all running containers

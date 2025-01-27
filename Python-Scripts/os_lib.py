@@ -79,7 +79,7 @@ def permission_file():
     os.chmod(file_name, 0o777)    
     print(f"Permission chnaged {file_name}")
     
-#current_working_dir()
+current_working_dir()
 #new_dir = "raja"
 #create_new()
 
@@ -92,4 +92,4 @@ def permission_file():
 #put_env()
 #path_editor()
 #permission_file()
-system_editor()
+#system_editor()

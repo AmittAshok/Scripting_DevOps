@@ -1,0 +1,3 @@
+./08-userinput.sh: line 3: read: read error: 0: Bad file descriptor
+Name is 
+Everything working properly
